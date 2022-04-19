@@ -1,0 +1,19 @@
+button {
+  transition: all 0.5s ease;
+  color: #7b38d8;
+  border: 3px solid #7b38d8;
+  font-family: "Montserrat", sans-serif;
+  background-color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1;
+  font-size: 17px;
+  background-color: transparent;
+  padding: 10px;
+  outline: none;
+  border-radius: 4px;
+}
+button:hover {
+  color: #9763e0;
+  background-color: #fff;
+}
