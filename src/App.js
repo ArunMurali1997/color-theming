@@ -108,15 +108,6 @@ const App = () => {
           onChange={(event) => setTheme(event.target.value, inputTypes[1])}
           label={"Secondary"}
         />
-        {/* <div>
-          <input
-            type="color"
-            value="#018989"
-            onChange={(event) => setTheme(event.target.value, inputTypes[1])}
-            id="secondary-color-input"
-          />
-          <label for="secondary-color-input">Secondary</label>
-        </div> */}
       </fieldset>
     </div>
   );
