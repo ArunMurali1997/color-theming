@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Header from "./components/Header/index";
 import ColorInput from "./components/ColorInput/index";
+import { inputTypes } from "./util/enum";
 import "./App.css";
 
 const App = () => {
@@ -100,18 +101,18 @@ const App = () => {
         <legend>Select Base Values:</legend>
 
         <ColorInput
-          onChange={(event) => setTheme(event.target.value, inputs[0])}
+          onChange={(event) => setTheme(event.target.value, inputTypes[0])}
           label={"Primary"}
         />
         <ColorInput
-          onChange={(event) => setTheme(event.target.value, inputs[1])}
+          onChange={(event) => setTheme(event.target.value, inputTypes[1])}
           label={"Secondary"}
         />
         {/* <div>
           <input
             type="color"
             value="#018989"
-            onChange={(event) => setTheme(event.target.value, inputs[1])}
+            onChange={(event) => setTheme(event.target.value, inputTypes[1])}
             id="secondary-color-input"
           />
           <label for="secondary-color-input">Secondary</label>
