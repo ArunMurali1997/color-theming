@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {inputTypes} from './util/enum'
+import { inputTypes } from "./util/enum";
 import "./App.css";
 
 const App = () => {
@@ -56,15 +56,6 @@ const App = () => {
     );
   };
 
-  const inputTypes = ["primary", "secondary"];
-
-  //   inputTypes.forEach((inputType) => {
-  //     document
-  //       .querySelector(`#${inputType}-color-input`)
-  //       .addEventListener("change", (e) => {
-  //         setTheme(e.target.value, inputType);
-  //       });
-  //   });
   return (
     <div>
       <h1>Pure CSS Color Theming 🎨</h1>
