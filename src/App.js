@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {inputTypes} from './util/enum'
 import "./App.css";
 
 const App = () => {
@@ -55,9 +56,9 @@ const App = () => {
     );
   };
 
-  const inputs = ["primary", "secondary"];
+  const inputTypes = ["primary", "secondary"];
 
-  //   inputs.forEach((inputType) => {
+  //   inputTypes.forEach((inputType) => {
   //     document
   //       .querySelector(`#${inputType}-color-input`)
   //       .addEventListener("change", (e) => {
@@ -108,7 +109,7 @@ const App = () => {
           <input
             type="color"
             value="#6400f0"
-            onChange={(event) => setTheme(event.target.value, inputs[0])}
+            onChange={(event) => setTheme(event.target.value, inputTypes[0])}
             id="primary-color-input"
           />
           <label for="primary-color-input">Primary</label>
@@ -117,7 +118,7 @@ const App = () => {
           <input
             type="color"
             value="#018989"
-            onChange={(event) => setTheme(event.target.value, inputs[1])}
+            onChange={(event) => setTheme(event.target.value, inputTypes[1])}
             id="secondary-color-input"
           />
           <label for="secondary-color-input">Secondary</label>
