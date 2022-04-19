@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Header from "./components/Header/index";
+import ColorInput from "./components/ColorInput/index";
 import "./App.css";
 
 const App = () => {
@@ -55,18 +57,10 @@ const App = () => {
     );
   };
 
-  const inputs = ["primary", "secondary"];
-
-  //   inputs.forEach((inputType) => {
-  //     document
-  //       .querySelector(`#${inputType}-color-input`)
-  //       .addEventListener("change", (e) => {
-  //         setTheme(e.target.value, inputType);
-  //       });
-  //   });
   return (
     <div>
-      <h1>Pure CSS Color Theming 🎨</h1>
+      <Header label={"Color Contrast"} />
+      <h2>Pure CSS Color Theming 🎨</h2>
       <div className="box-container">
         <div className="box-container">
           <div className="box primary">
@@ -104,16 +98,16 @@ const App = () => {
       </div>
       <fieldset className="controls">
         <legend>Select Base Values:</legend>
-        <div>
-          <input
-            type="color"
-            value="#6400f0"
-            onChange={(event) => setTheme(event.target.value, inputs[0])}
-            id="primary-color-input"
-          />
-          <label for="primary-color-input">Primary</label>
-        </div>
-        <div>
+
+        <ColorInput
+          onChange={(event) => setTheme(event.target.value, inputs[0])}
+          label={"Primary"}
+        />
+        <ColorInput
+          onChange={(event) => setTheme(event.target.value, inputs[1])}
+          label={"Secondary"}
+        />
+        {/* <div>
           <input
             type="color"
             value="#018989"
@@ -121,7 +115,7 @@ const App = () => {
             id="secondary-color-input"
           />
           <label for="secondary-color-input">Secondary</label>
-        </div>
+        </div> */}
       </fieldset>
     </div>
   );
