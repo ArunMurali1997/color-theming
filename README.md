@@ -30,32 +30,17 @@ To get the complimentary or triadic shades, we'll need to adjust the hue of the 
 but can also take a shorcut and remember that the color wheel in HSL goes from 0 to 360. That means adding or subtracting 180 will give us the complementary shade.
 
 complimentary function
-`css
---colorPrimary--complement: calc(var(--colorPrimary-h) + 180), var(--colorPrimary-s), var(--colorPrimary-l));
 
-`
+`css --colorPrimary--complement: calc(var(--colorPrimary-h) + 180), var(--colorPrimary-s), var(--colorPrimary-l)); `
 Triad function
 For triadic colors, we cut 360 into thirds, meaning we can get the first and second triad by adding or subtracting 120 and 240 respectively.
 
-`css
--colorPrimary--triad1: calc(var(--colorPrimary-h) + 120), var(--colorPrimary-s), var(--colorPrimary-l));
-
---colorPrimary--triad2: calc(var(--colorPrimary-h) + 240), var(--colorPrimary-s), var(--colorPrimary-l));
-
-`
+`css --colorPrimary--triad1: calc(var(--colorPrimary-h) + 120), var(--colorPrimary-s), var(--colorPrimary-l)); --colorPrimary--triad2: calc(var(--colorPrimary-h) + 240), var(--colorPrimary-s), var(--colorPrimary-l));`
 
 Recreating Mix
 
 we need two colors to mix, so let's break them down:
-`css
---color-1-h: 0;
---color-1-s: 100%;
---color-1-l: 50%;
-
---color-2-h: 50;
---color-2-s: 80%;
---color-2-l: 50%;
-`
+`css //color1 --color-1-h: 0;--color-1-s: 100%;--color-1-l: 50%;//color2--color-2-h: 50;--color-2-s: 80%;--color-2-l: 50%;`
 
 mixed color:
 
